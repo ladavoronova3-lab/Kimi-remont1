@@ -257,18 +257,20 @@
     .fin__after { clip-path: none; }
     .fin__after .fin__scrim, .fin__after .fin__copy, .fin .foot { transform: none; }
   }
-  /* линия делителя гаснет вместе с подписями и точками после первого экрана */
+  /* линия делителя гаснет вместе с точками после первого экрана */
   .chrome__line { transition: opacity .3s var(--v-ease-out); }
   .chrome__line.is-edge { opacity: 0; }
+  /* пара «было/стало» в разделе «Как работаем»: шторка поверх фото «было» */
+  .pair__fig .ba__after { position: absolute; inset: 0; margin: 0; }
+  .pair__fig .ba__after img { width: 100%; height: 100%; object-fit: cover; }
 </style>
 </head>
 <body>
 <div class="v-page">
 
   <span class="chrome__line" aria-hidden="true"></span>
-  <div class="chrome__labels" aria-hidden="true"><span>Было</span><span>Стало</span></div>
   <nav class="chrome__ticks" aria-label="Разделы страницы">
-    <a href="#hero" data-t="Было и стало" aria-label="Было и стало"></a>
+    <a href="#hero" data-t="Главная" aria-label="Главная"></a>
     <a href="#ceny" data-t="Услуги и цены" aria-label="Услуги и цены"></a>
     <a href="#prorab" data-t="Как работаем" aria-label="Как работаем"></a>
     <a href="#raschet" data-t="Рассчитать" aria-label="Рассчитать ремонт"></a>
@@ -277,14 +279,11 @@
 
   <main>
 
-    <!-- 1 · ОФФЕР (вариант Б): «было» на весь экран, слева светлая колонка с оффером 44%;
-         по прокрутке шторка справа налево открывает «стало» за колонкой -->
-    <section class="hero" id="hero" data-v-act="pin" data-v-span="2.4" aria-label="Стекольные работы и ремонт в Москве">
+    <!-- 1 · ОФФЕР: статичное фото перегородки из рифлёного стекла на весь экран,
+         слева светлая колонка с оффером 44%; без шторки -->
+    <section class="hero" id="hero" data-v-act="pin" data-v-span="1.2" aria-label="Стекольные работы и ремонт в Москве">
       <div data-v-stage>
-        <div class="hero__before dark" data-v-in data-v-in-self>
-          <img src="assets/room-before.webp" srcset="assets/room-before-800.webp 800w, assets/room-before-1200.webp 1200w, assets/room-before.webp 1920w" sizes="100vw" alt="Ванная до ремонта: бетонные стены, трубы, стремянка" width="1920" height="1067" decoding="async">
-        </div>
-        <figure class="hero__after" data-v-reveal="left" data-v-reveal-at="0.05 0.6">
+        <figure class="hero__after">
           <img src="assets/hall-after.webp" srcset="assets/hall-after-800.webp 800w, assets/hall-after.webp 1200w" sizes="100vw" alt="Перегородка из рифлёного стекла в чёрном профиле после ремонта" width="1200" height="1589" fetchpriority="high">
         </figure>
         <div class="hero__offer" data-v-cue="0 1 0 0" data-v-rise="0">
@@ -333,8 +332,12 @@
           <span class="v-label">Как работаем</span>
           <h2 class="v-display v-display--md">Мастер на связи каждый день</h2>
           <p class="v-body">Вы говорите напрямую с мастером – без прорабов-посредников. Перед стартом получаете план ремонта. Каждый день – фото с площадки и отчёт: что сделано за день и что дальше, если вас нет рядом.</p>
-          <figure class="pair__fig pair__fig--tall" data-v-reveal="up" data-v-reveal-at="0.22 0.52">
-            <img src="assets/room-after.webp" srcset="assets/room-after-800.webp 800w, assets/room-after-1200.webp 1200w, assets/room-after.webp 1920w" sizes="(max-width: 860px) 100vw, 34rem" alt="Ванная после ремонта: душевая из стекла, плитка, чистота" width="1920" height="1067" loading="lazy" decoding="async">
+          <figure class="pair__fig pair__fig--wide ba">
+            <img src="assets/room-before.webp" srcset="assets/room-before-800.webp 800w, assets/room-before-1200.webp 1200w, assets/room-before.webp 1920w" sizes="(max-width: 860px) 100vw, 60rem" alt="Ванная до ремонта: бетонные стены, трубы" width="1920" height="1067" loading="lazy" decoding="async">
+            <div class="ba__after" data-v-reveal="left" data-v-reveal-at="0.15 0.7">
+              <img src="assets/room-after.webp" srcset="assets/room-after-800.webp 800w, assets/room-after-1200.webp 1200w, assets/room-after.webp 1920w" sizes="(max-width: 860px) 100vw, 60rem" alt="Та же ванная после ремонта: душевая из стекла, плитка" width="1920" height="1067" loading="lazy" decoding="async">
+            </div>
+            <figcaption>Было и стало: ванная со стеклянной душевой</figcaption>
           </figure>
         </div>
       </div>
@@ -370,14 +373,10 @@
 
 <script src="vibe.js"></script>
 <script>
-  // На телефоне пины короче: hero и финал держатся 1,5 экрана вместо 2,2.
+  // На телефоне финал держится 1,5 экрана вместо 2,2.
   // data-v-span из CSS не поменять, поэтому правим атрибут до монтирования.
   if (window.matchMedia('(max-width: 860px)').matches) {
-    document.getElementById('hero').setAttribute('data-v-span', '1.5');
     document.getElementById('raschet').setAttribute('data-v-span', '1.5');
-    // на телефоне шторка hero идёт снизу вверх, а не справа налево
-    var heroAfter = document.querySelector('#hero .hero__after');
-    if (heroAfter) heroAfter.setAttribute('data-v-reveal', 'up');
   }
   Vibe.mount(document.querySelector('.v-page'));
 
@@ -423,7 +422,8 @@
         lastDx = dx; page.style.setProperty('--dx', dx + '%'); page.style.setProperty('--dxv', dx + 'vw');
       }
       var edge = dx < 3;
-      ticksEl.classList.toggle('is-edge', edge); labelsEl.classList.toggle('is-edge', edge);
+      ticksEl.classList.toggle('is-edge', edge);
+      if (labelsEl) labelsEl.classList.toggle('is-edge', edge);
       if (lineEl) lineEl.classList.toggle('is-edge', edge);
       var n = -1, mid = y + vh * 0.5;
       for (var i = 0; i < secs.length; i++) if (secs[i].offsetTop <= mid) n = i;
