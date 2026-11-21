@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Стекло и ремонт · душевые из стекла, перегородки, ремонт в Москве</title>
+<meta name="description" content="Бригада из трёх мастеров: душевые кабины и перегородки из стекла, ремонт ванных, квартир и домов в Москве и на юге Подмосковья. Смета в договоре, оплата по этапам.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Стекло и ремонт">
+<meta property="og:title" content="Стекло и ремонт · душевые из стекла, перегородки, ремонт в Москве">
+<meta property="og:description" content="Было: бетон, трубы, пыль. Стало: душевая из стекла, сдано по графику, убрано. Смета в договоре, фотоотчёт каждые 7 дней, оплата по этапам.">
+<meta property="og:url" content="{{адрес сайта}}">
+<meta property="og:image" content="{{адрес сайта}}/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%274%27 y=%274%27 width=%2712%27 height=%2724%27 fill=%27%2324292a%27/%3E%3Crect x=%2716%27 y=%274%27 width=%2712%27 height=%2724%27 fill=%27%232c6a4e%27/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/wixmadefordisplay-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/golostext-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Стекло и ремонт","description":"Душевые кабины и перегородки из стекла, ремонт ванных, квартир и домов: смета в договоре, фотоотчёт каждые 7 дней, оплата по этапам, уборка после каждого этапа.","url":"{{адрес сайта}}","image":"{{адрес сайта}}/assets/og.jpg","telephone":"{{телефон}}","address":{"@type":"PostalAddress","streetAddress":"{{адрес}}","addressLocality":"Москва","addressCountry":"RU"},"areaServed":"Москва и юг Московской области"}
+</script>
+<style>
+  /* ---- тема: шесть цветов, два шрифта ------------------------------------ */
+  .v-page {
+    --v-canvas: #eef0ee; --v-surface: #ffffff;
+    --v-ink: #171b1a; --v-ink-soft: #5f6a66;
+    --v-accent: #2c6a4e; --v-accent-ink: #eef8f1;
+    --v-font-display: "Wix Madefor Display", "Segoe UI", system-ui, sans-serif;
+    --v-font-text: "Golos Text", "Segoe UI", system-ui, sans-serif;
+    --v-shadow-color: 23 27 26;
+    --v-radius: 8px;
+    --dark: #24292a;
+    --line: rgb(132 141 137 / .7);
+    --dx: 44%; --dxv: 44vw;
+    --hx: 44%; --hxv: 44vw; --hxn: 44;
+  }
+  /* тёмная сторона «Было»: свои чернила и цвет, оба переопределяем */
+  .dark { --v-ink: #eef1ef; --v-ink-soft: #a9b2ae; --v-surface: #30373a; color: var(--v-ink); background: var(--dark); }
+  .v-page .v-display { font-weight: 700; }
+  .v-page .v-label { font-weight: 500; }
+  .v-page .v-btn { font-size: var(--v-t-base); }
+
+  /* ---- хром: делитель и есть шапка ---------------------------------------- */
+  /* три fixed-элемента на одной координате --dx: линия смешивается с фоном (difference),
+     подписи «Было / Стало» с явными цветами под свою сторону, точки прогресса кликабельные якоря */
+  .chrome__line, .chrome__labels, .chrome__ticks { position: fixed; top: 0; left: var(--dx); z-index: 30; }
+  .chrome__line { height: 100svh; width: 1px; margin-left: -0.5px; background: #8a8d95; mix-blend-mode: difference; pointer-events: none; }
+  .chrome__labels { top: 1.1rem; transform: translateX(-50%); display: flex; gap: 1.6rem; white-space: nowrap; pointer-events: none;
+    font-size: var(--v-t-xs); font-weight: 600; letter-spacing: var(--v-track-wide); text-transform: uppercase; transition: opacity .3s var(--v-ease-out); }
+  .chrome__labels span { width: 4.2rem; }
+  .chrome__labels span:first-child { text-align: right; color: #eef1ef; text-shadow: 0 1px 3px rgb(0 0 0 / .45); }
+  .chrome__labels span:last-child { color: #171b1a; }
+  .chrome__ticks { top: 2.7rem; transform: translateX(-50%); display: flex; flex-direction: column; gap: 0; transition: opacity .3s var(--v-ease-out); }
+  .chrome__ticks a { position: relative; display: block; width: 24px; height: 22px; }
+  .chrome__ticks a::before { content: ""; position: absolute; left: 9px; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: rgb(132 141 137 / .55); box-shadow: 0 0 0 2px rgb(238 240 238 / .35);
+    transition: background-color .3s var(--v-ease-out), transform .3s var(--v-ease-out); }
+  .chrome__ticks a.is-on::before { background: var(--v-accent); }
+  .chrome__ticks a.is-now::before { transform: scale(1.35); }
+  .chrome__ticks a::after { content: attr(data-t); position: absolute; left: 1.6rem; top: 50%; transform: translateY(-50%) translateX(-4px); white-space: nowrap;
+    font-size: var(--v-t-xs); font-weight: 600; letter-spacing: var(--v-track-wide); text-transform: uppercase; color: #171b1a;
+    opacity: 0; transition: opacity .16s var(--v-ease-out), transform .16s var(--v-ease-out); pointer-events: none; }
+  .chrome__ticks a:focus-visible::after { opacity: 1; transform: translateY(-50%); }
+  @media (hover: hover) and (pointer: fine) { .chrome__ticks a:hover::after { opacity: 1; transform: translateY(-50%); } }
+  .chrome__ticks.is-edge, .chrome__labels.is-edge { opacity: 0; pointer-events: none; }
+  .sticky-cta { display: none; }
+  @media (max-width: 860px) {
+    .chrome__line, .chrome__labels, .chrome__ticks { display: none; }
+    /* на телефоне вместо точек липкая кнопка: появляется после hero, уходит в финале */
+    .sticky-cta { display: block; position: fixed; left: 50%; bottom: calc(1rem + env(safe-area-inset-bottom)); z-index: 35; transform: translateX(-50%);
+      transition: opacity .3s var(--v-ease-out), transform .3s var(--v-ease-out); }
+    .sticky-cta .v-btn { box-shadow: var(--v-e2); }
+    .sticky-cta.is-hidden { opacity: 0; transform: translate(-50%, 12px); pointer-events: none; }
+  }
+
+  /* ---- hero (вариант Б): «было» на весь экран, слева светлая колонка с оффером 44%;
+     по прокрутке шторка справа налево открывает «стало» за колонкой (reveal от движка).
+     --hxn пишет JS от --v-p: нужен только для затухания подписи «было». Хром (--dx) на сцене
+     стоит на 44% (кромка колонки), на выезде уходит к 50% для пар */
+  .hero__before, .hero__after { position: absolute; inset: 0; }
+  .hero__before img, .hero__after img { width: 100%; height: 100%; object-fit: cover; }
+  .hero__before::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to top, rgb(36 41 42 / .78) 0%, rgb(36 41 42 / .45) 35%, rgb(36 41 42 / .4) 100%); }
+  .hero__after { margin: 0; z-index: 1; }
+  /* подпись «было» на тёмной части справа: мелко, светлыми чернилами, гаснет по мере открытия шторки.
+     Селектор с запасом специфичности: движок пишет opacity: 1 на детей [data-v-in-self] */
+  .hero .hero__before .hero__was { position: absolute; z-index: 2; right: var(--v-gutter); bottom: clamp(2.5rem, 8vh, 4.5rem); max-width: 22ch; text-align: right;
+    font-size: var(--v-t-sm); font-weight: 500; letter-spacing: .01em; color: #eef1ef; text-shadow: 0 1px 3px rgb(0 0 0 / .45);
+    opacity: clamp(0, calc((var(--hxn) - 18) / 10), 1); }
+  /* светлая колонка оффера: видна с p = 0 и стоит весь акт */
+  .hero__offer { position: absolute; z-index: 3; top: 0; bottom: 0; left: 0; width: 44%; --s: 238 240 238;
+    background: rgb(var(--s) / .94); display: flex; flex-direction: column; justify-content: center; padding: 0 var(--v-gutter); }
+  .hero__inner { display: flex; flex-direction: column; gap: var(--v-5); max-width: 44rem; }
+  .hero__title { font-size: clamp(2.2rem, 1.1rem + 2.9vw, 4.4rem); line-height: .98; text-wrap: pretty; }
+  .hero__lede { max-width: 40ch; color: var(--v-ink); }
+  .hero__cta { margin-top: var(--v-3); display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); }
+  .hero__hint { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 30ch; }
+  @media (max-width: 860px) {
+    /* колонка становится светлой полосой снизу, шторка идёт снизу вверх (атрибут меняет JS до монтирования) */
+    .hero .hero__before .hero__was { bottom: auto; top: clamp(1.2rem, 4svh, 2.4rem); max-width: 16ch; font-size: var(--v-t-xs);
+      opacity: clamp(0, calc((var(--hxn) - 24) / 10), 1); }
+    .hero__offer { top: auto; bottom: 0; right: 0; width: auto; justify-content: flex-end;
+      background: linear-gradient(to top, rgb(var(--s) / .96) 0%, rgb(var(--s) / .92) 55%, rgb(var(--s) / .55) 78%, transparent 100%);
+      padding: clamp(2.5rem, 8svh, 4rem) var(--v-gutter) clamp(1.75rem, 4svh, 2.75rem); }
+    .hero__inner { gap: var(--v-4); max-width: none; }
+    .hero__title { font-size: clamp(1.75rem, 1.2rem + 2.6vw, 2.25rem); line-height: 1.02; }
+    .hero__lede { font-size: var(--v-t-base); max-width: 36ch; }
+    .hero__cta { margin-top: var(--v-2); flex-direction: column; align-items: flex-start; gap: var(--v-3); }
+  }
+
+  /* ---- пары «без нас / с нами» ------------------------------------------- */
+  /* обе стороны начинаются на одной высоте (align-items: start); у пар с короткой тёмной
+     стороной она липнет к верху экрана и едет рядом с решением (pair--sticky) */
+  .pair { display: grid; grid-template-columns: 1fr 1fr; }
+  .pair__side { display: flex; align-items: start; }
+  .pair__inner { width: 100%; max-width: 38rem; padding: var(--v-section) var(--v-gutter); display: flex; flex-direction: column; gap: var(--v-5); }
+  .pair__side--before .pair__inner { margin-left: auto; padding-right: calc(var(--v-gutter) + 2.5rem); }
+  .pair__side--after .pair__inner { padding-left: calc(var(--v-gutter) + 2.5rem); }
+  .pair--sticky .pair__side--before .pair__inner { position: sticky; top: 0; }
+  .pair__inner .v-label { margin-bottom: calc(var(--v-3) * -1); }
+  .pair__inner .v-body { color: var(--v-ink-soft); }
+  .pair__inner .v-body b { color: var(--v-ink); font-weight: 600; }
+  .pair__fig { position: relative; border-radius: var(--v-radius); overflow: hidden; margin-top: var(--v-4); box-shadow: var(--v-e1); }
+  .pair__fig--tall { aspect-ratio: 3 / 4; }
+  .pair__fig--wide { aspect-ratio: 16 / 10; }
+  .pair__fig--box { aspect-ratio: 4 / 5; }
+  .pair__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .pair__fig figcaption, .objects__pair figcaption { position: absolute; left: var(--v-4); right: var(--v-4); bottom: var(--v-4); z-index: 1; font-size: var(--v-t-sm); letter-spacing: .01em; color: #f2f1ec; text-shadow: 0 1px 2px rgb(0 0 0 / .5); }
+  .pair__fig::after, .objects__pair figure::after { content: ""; position: absolute; inset: auto 0 0 0; height: 40%; background: linear-gradient(to top, rgb(20 24 23 / .72), transparent); pointer-events: none; }
+  .pair__big { font-family: var(--v-font-display); font-weight: 700; font-size: clamp(6rem, 16vw, 15rem); line-height: .85; letter-spacing: -.05em;
+    color: color-mix(in oklab, var(--v-ink) 12%, transparent); margin-bottom: calc(var(--v-5) * -1); user-select: none; }
+  .rows { display: flex; flex-direction: column; }
+  .rows li { display: grid; grid-template-columns: 1fr auto; column-gap: var(--v-6); row-gap: var(--v-1); padding: var(--v-4) 0; border-top: 1px solid var(--v-hair); align-items: baseline; }
+  .rows li:last-child { border-bottom: 1px solid var(--v-hair); }
+  .rows h3 { grid-column: 1; font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); letter-spacing: var(--v-track-normal); line-height: 1.15; }
+  .rows p { grid-column: 1; color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  .rows .term { grid-column: 1; font-size: var(--v-t-sm); color: var(--v-ink); }
+  .rows .price { grid-column: 2; grid-row: 1 / span 3; align-self: start; font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); white-space: nowrap; text-align: right; }
+  .rows .num { font-family: var(--v-font-display); font-weight: 600; color: var(--v-ink-soft); margin-right: .5em; }
+  .pair__note { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 44ch; }
+  .pair__note b { color: var(--v-ink); font-weight: 600; }
+  .example { padding: var(--v-5); border-radius: var(--v-radius); background: var(--v-surface); box-shadow: var(--v-e1), var(--v-edge); display: flex; flex-direction: column; gap: var(--v-2); }
+  .example__title { font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); font-weight: 500; }
+  .example__text { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.3; letter-spacing: var(--v-track-normal); text-wrap: pretty; }
+  .example .pair__note { max-width: none; }
+  @media (max-width: 860px) {
+    .pair { grid-template-columns: 1fr; }
+    .pair__side--before .pair__inner { margin-left: 0; padding-right: var(--v-gutter); }
+    .pair__side--after .pair__inner { padding-left: var(--v-gutter); }
+    .pair--sticky .pair__side--before .pair__inner { position: static; }
+    .pair__inner { max-width: none; gap: var(--v-4); }
+    .pair__fig--tall { aspect-ratio: 4 / 5; }
+    .pair__big { font-size: clamp(5rem, 28vw, 8rem); }
+    .rows .price { grid-column: 1; grid-row: auto; text-align: left; font-size: var(--v-t-base); }
+  }
+
+  /* ---- отзывы с Яндекс.Карт, объекты, кто делает (все тексты слотами) ---- */
+  .reviews { display: flex; flex-direction: column; gap: var(--v-4); }
+  .reviews__rating { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-2) var(--v-3); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .reviews__num { font-family: var(--v-font-display); font-weight: 700; font-size: var(--v-t-2xl); line-height: 1; color: var(--v-ink); margin-right: var(--v-1); }
+  .reviews__rating a { color: var(--v-ink); display: inline-flex; align-items: center; min-height: 44px; }
+  /* звёзды без картинок: пять фигур, заливка по --r (0..5) */
+  .reviews__stars { --size: 1.1rem; display: inline-block; width: calc(var(--size) * 5); height: var(--size);
+    background: linear-gradient(90deg, var(--v-accent) calc(var(--r, 0) / 5 * 100%), var(--v-hair-strong) 0);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z'/%3E%3C/svg%3E") 0 0 / var(--size) var(--size) repeat-x;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z'/%3E%3C/svg%3E") 0 0 / var(--size) var(--size) repeat-x; }
+  .reviews__stars--sm { --size: .8rem; vertical-align: middle; }
+  .reviews__list { display: flex; flex-direction: column; margin-top: var(--v-2); }
+  .reviews__item { padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); }
+  .reviews__item:last-child { border-bottom: 1px solid var(--v-hair); }
+  .reviews__item--big .reviews__text { font-size: var(--v-t-lg); line-height: 1.4; }
+  .reviews__text { text-wrap: pretty; }
+  .reviews__meta { margin-top: var(--v-3); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .reviews__meta b { color: var(--v-ink); font-weight: 600; }
+  .objects { display: flex; flex-direction: column; gap: var(--v-4); }
+  .objects__title { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); letter-spacing: var(--v-track-normal); }
+  .objects__list { display: flex; flex-direction: column; gap: var(--v-5); }
+  .objects__pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--v-2); }
+  .objects__pair figure { position: relative; aspect-ratio: 4 / 5; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e1); }
+  .objects__pair img { width: 100%; height: 100%; object-fit: cover; }
+  .objects__pair figcaption { left: var(--v-3); right: var(--v-3); bottom: var(--v-3); }
+  .objects__meta { margin-top: var(--v-3); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .who { display: grid; grid-template-columns: 4.5rem 1fr; gap: var(--v-4); align-items: start; padding-top: var(--v-5); border-top: 1px solid var(--v-hair); }
+  .who__ava { width: 4.5rem; height: 4.5rem; border-radius: 50%; border: 1px dashed var(--v-hair-strong); display: grid; place-items: center; font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .who__name { font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.15; }
+  .who__role { margin-top: var(--v-1); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .who__legal { margin-top: var(--v-2); font-size: var(--v-t-sm); color: var(--v-ink); }
+
+  /* ---- цены: слева кухня «до» на всю высоту (липнет), справа цены и сроки -- */
+  .prices__photo { position: sticky; top: 0; width: 100%; height: 100svh; overflow: hidden; }
+  .prices__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .prices__photo::after { content: ""; position: absolute; inset: 0; background: rgb(36 41 42 / .28); }
+  .prices__scrim { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to top, rgb(36 41 42 / .92) 0%, rgb(36 41 42 / .6) 34%, transparent 62%); }
+  .prices__copy { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; margin-left: auto; max-width: 38rem; padding: 0 calc(var(--v-gutter) + 2.5rem) clamp(3rem, 11vh, 7rem) var(--v-gutter); display: flex; flex-direction: column; gap: var(--v-4); }
+  .prices__copy .v-body { color: var(--v-ink-soft); }
+  @media (max-width: 860px) {
+    .prices__photo { position: relative; height: 62svh; }
+    .prices__copy { max-width: none; padding: 0 var(--v-gutter) var(--v-6); }
+  }
+
+  /* ---- финал: коллапс ------------------------------------------------------ */
+  .fin { --q: clamp(0, calc((var(--v-p, 0) - .12) / .6), 1); }
+  .fin__before { position: absolute; inset: 0; }
+  .fin__after { position: absolute; inset: 0; z-index: 2; clip-path: inset(0 0 0 calc((1 - var(--q)) * 50%)); background: var(--v-canvas); }
+  .fin__after::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc((1 - var(--q)) * 50%); width: 1px; background: var(--line); z-index: 4; }
+  .fin__img { position: absolute; inset: 0; }
+  .fin__img img { width: 100%; height: 100%; object-fit: cover; }
+  .fin__before .fin__img::after { content: ""; position: absolute; inset: 0; background: rgb(36 41 42 / .5); }
+  .fin__scrim { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+  .fin__before .fin__scrim { background: linear-gradient(to top, rgb(36 41 42 / .9) 0%, rgb(36 41 42 / .55) 34%, transparent 64%); }
+  .fin__after .fin__scrim { width: 100vw; transform: translateX(calc((1 - var(--q)) * 50vw));
+    background: linear-gradient(to right, rgb(238 240 238 / .96) 0%, rgb(238 240 238 / .86) 30%, rgb(238 240 238 / .45) 55%, transparent 80%),
+                linear-gradient(to top, rgb(238 240 238 / .9) 0%, rgb(238 240 238 / .4) 24%, transparent 48%); }
+  .fin__copy { position: absolute; z-index: 3; left: var(--v-gutter); bottom: clamp(6rem, 16vh, 10rem); max-width: min(34rem, 40vw); }
+  .fin__after .fin__copy { left: 0; padding-left: var(--v-gutter); width: min(40rem, 46vw); max-width: none; transform: translateX(calc((1 - var(--q)) * 50vw)); }
+  .fin__copy .v-lede { margin-top: var(--v-4); max-width: 30ch; }
+  .fin__copy .v-btn { margin-top: var(--v-6); }
+  .fin__meta { margin-top: var(--v-5); display: flex; flex-direction: column; gap: var(--v-1); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .fin__tel { align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-family: var(--v-font-display); font-weight: 600; font-size: var(--v-t-lg); color: var(--v-ink); }
+  .fin__msg { display: flex; flex-wrap: wrap; gap: var(--v-4); }
+  .fin__msg a { display: inline-flex; align-items: center; min-height: 44px; color: var(--v-ink); font-weight: 500; }
+  .foot { position: absolute; z-index: 3; left: 0; bottom: 0; width: 100vw; padding: var(--v-4) var(--v-gutter); display: flex; justify-content: space-between; gap: var(--v-4); flex-wrap: wrap;
+    border-top: 1px solid var(--v-hair); font-size: var(--v-t-sm); color: var(--v-ink-soft); transform: translateX(calc((1 - var(--q)) * 50vw)); }
+  @media (max-width: 860px) {
+    .fin__after { clip-path: inset(calc((1 - var(--q)) * 50%) 0 0 0); }
+    .fin__after::before { top: calc((1 - var(--q)) * 50%); left: 0; right: 0; bottom: auto; width: auto; height: 1px; }
+    .fin__before .fin__img { inset: 0 0 auto 0; height: 60%; }
+    .fin__before .fin__scrim { background: linear-gradient(to bottom, rgb(36 41 42 / .9) 0%, rgb(36 41 42 / .6) 36%, transparent 66%); }
+    .fin__after .fin__scrim { width: auto; transform: none; background: linear-gradient(to top, rgb(238 240 238 / .97) 0%, rgb(238 240 238 / .8) 40%, rgb(238 240 238 / .25) 70%, transparent 100%); }
+    .fin__copy { left: var(--v-gutter); right: var(--v-gutter); max-width: none; bottom: auto; top: clamp(3.6rem, 8svh, 5rem); }
+    .fin__after .fin__copy { top: auto; bottom: 5rem; left: var(--v-gutter); width: auto; padding-left: 0; transform: none; }
+    .fin__copy .v-lede { margin-top: var(--v-3); font-size: var(--v-t-base); }
+    .fin__copy .v-btn { margin-top: var(--v-5); }
+    .fin__meta { margin-top: var(--v-4); flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: var(--v-5); }
+    .fin__meta > span { width: 100%; }
+    .foot { transform: none; padding: var(--v-3) var(--v-gutter); gap: var(--v-1) var(--v-4); }
+    .foot__more { display: none; }
+  }
+
+  /* ---- упрощение 21.11: секции без тёмной стороны «было» --------------------- */
+  .pair--solo { grid-template-columns: 1fr; }
+  .pair--solo .pair__inner { max-width: 44rem; margin: 0 auto; padding-left: var(--v-gutter); padding-right: var(--v-gutter); }
+  /* главный оффер и «как работаем»: тёплый светло-коричневый градиент, стекольные работы – акцентом */
+  .pair--feature, .pair--warm { background: linear-gradient(to bottom, #f4eee2 0%, #eee3d2 100%); }
+  .pair--feature .rows li:nth-child(1) h3, .pair--feature .rows li:nth-child(2) h3 { color: var(--v-accent); }
+  /* футер: спокойная серая полоса */
+  .fin .foot { background: #dde1dc; color: #5f6a66; border-top: none; }
+  /* финал без «было»: «стало» на весь экран сразу, без коллапса */
+  .fin__after { clip-path: none; }
+  .fin__after::before { display: none; }
+  .fin__after .fin__scrim, .fin__after .fin__copy, .fin .foot { transform: none; }
+  @media (max-width: 860px) {
+    .fin__after { clip-path: none; }
+    .fin__after .fin__scrim, .fin__after .fin__copy, .fin .foot { transform: none; }
+  }
+  /* линия делителя гаснет вместе с подписями и точками после первого экрана */
+  .chrome__line { transition: opacity .3s var(--v-ease-out); }
+  .chrome__line.is-edge { opacity: 0; }
+</style>
+</head>
+<body>
+<div class="v-page">
+
+  <span class="chrome__line" aria-hidden="true"></span>
+  <div class="chrome__labels" aria-hidden="true"><span>Было</span><span>Стало</span></div>
+  <nav class="chrome__ticks" aria-label="Разделы страницы">
+    <a href="#hero" data-t="Было и стало" aria-label="Было и стало"></a>
+    <a href="#ceny" data-t="Услуги и цены" aria-label="Услуги и цены"></a>
+    <a href="#prorab" data-t="Как работаем" aria-label="Как работаем"></a>
+    <a href="#raschet" data-t="Рассчитать" aria-label="Рассчитать ремонт"></a>
+  </nav>
+  <div class="sticky-cta is-hidden"><a class="v-btn" href="{{ссылка-расчёта}}">Рассчитать стоимость</a></div>
+
+  <main>
+
+    <!-- 1 · ОФФЕР (вариант Б): «было» на весь экран, слева светлая колонка с оффером 44%;
+         по прокрутке шторка справа налево открывает «стало» за колонкой -->
+    <section class="hero" id="hero" data-v-act="pin" data-v-span="2.4" aria-label="Стекольные работы и ремонт в Москве">
+      <div data-v-stage>
+        <div class="hero__before dark" data-v-in data-v-in-self>
+          <img src="assets/room-before.webp" srcset="assets/room-before-800.webp 800w, assets/room-before-1200.webp 1200w, assets/room-before.webp 1920w" sizes="100vw" alt="Ванная до ремонта: бетонные стены, трубы, стремянка" width="1920" height="1067" decoding="async">
+          <p class="hero__was">Было: бетон, трубы, пыль</p>
+        </div>
+        <figure class="hero__after" data-v-reveal="left" data-v-reveal-at="0.05 0.6">
+          <img src="assets/room-after.webp" srcset="assets/room-after-800.webp 800w, assets/room-after-1200.webp 1200w, assets/room-after.webp 1920w" sizes="100vw" alt="Та же ванная после ремонта: душевая из стекла, плитка, чистота" width="1920" height="1067" fetchpriority="high">
+        </figure>
+        <div class="hero__offer" data-v-cue="0 1 0 0" data-v-rise="0">
+          <div class="hero__inner" data-v-in data-v-stagger="80">
+            <h1 class="v-display v-display--xl hero__title">Стеклянные душевые и ремонт в Москве – мастера на связи</h1>
+            <p class="v-lede hero__lede">Бригада мастеров: душевые кабины и перегородки из стекла, ремонт ванных, квартир и домов. Стекло делаем сами, без отдельных подрядчиков.</p>
+            <div class="hero__cta">
+              <a class="v-btn" href="{{ссылка-расчёта}}">Рассчитать стоимость</a>
+              <p class="hero__hint">Пришлите размеры или план – вернёмся со сметой.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · ЦЕНА БЕЗДЕЙСТВИЯ / ПОВОРОТ: прораб пропал / график и фотоотчёт -->
+    <section class="pair pair--solo pair--feature prices" id="ceny" data-v-act="flow" aria-label="Услуги и цены">
+      <div class="pair__side pair__side--after">
+        <div class="pair__inner" data-v-in data-v-stagger="60">
+          <h2 class="v-display v-display--md">Что делаем</h2>
+          <p class="v-body">Квартиры и частные дома в Москве и на юге Подмосковья. Наш главный профиль – стекольные работы: то, за что не берутся многие бригады, мы делаем сами. Точную сумму и график называем после замера и фиксируем в договоре.</p>
+          <ul class="rows">
+            <li><h3>Душевые кабины и ограждения из стекла</h3><p>Замер, изготовление, установка. Закалённое стекло, фурнитура под интерьер</p><span class="term">по вашим размерам</span><span class="price">уточнить</span></li>
+            <li><h3>Стеклянные перегородки</h3><p>Зонируют комнату или кухню-гостиную и пропускают свет. Цельностеклянные и в профиле</p><span class="term">по вашим размерам</span><span class="price">уточнить</span></li>
+            <li><h3>Ремонт ванной</h3><p>От демонтажа до чистовой: плитка, сантехника, тёплый пол – и душевая из стекла в финале</p><span class="term">смета после осмотра</span><span class="price">уточнить</span></li>
+            <li><h3>Ремонт квартир и домов</h3><p>Косметический и чистовой, новостройки и вторичка</p><span class="term">смета после осмотра</span><span class="price">уточнить</span></li>
+          </ul>
+          <div class="example">
+            <p class="example__title">Как считаем</p>
+            <p class="example__text">Стекло – по вашим размерам, ремонт – по площади и составу работ. Смету фиксируем в договоре до начала, она не растёт по ходу.</p>
+            <p class="pair__note">Материалы можем закупить сами или принять ваши. Точный список и суммы – в смете после замера.</p>
+          </div>
+          <p class="pair__note"><b>Замер и смета – бесплатно</b> в Москве и на юге Подмосковья. Гарантия на работы 2 года.</p>
+          <a class="v-btn v-btn--ghost" href="{{ссылка-расчёта}}">Рассчитать стоимость</a>
+          <figure class="pair__fig pair__fig--tall">
+            <img src="assets/kitchen-tall.webp" srcset="assets/kitchen-tall-800.webp 800w, assets/kitchen-tall.webp 1200w" sizes="(max-width: 860px) 100vw, 34rem" alt="Ванная после ремонта: душевая из прозрачного стекла, плитка, белая раковина" width="1200" height="1589" loading="lazy" decoding="async">
+            <figcaption>Стало: душевая из стекла вместо шторки и поддона</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="pair pair--solo pair--warm" id="prorab" data-v-act="flow" aria-label="Как мы работаем">
+      <div class="pair__side pair__side--after">
+        <div class="pair__inner" data-v-in data-v-stagger="70">
+          <span class="v-label">Как работаем</span>
+          <h2 class="v-display v-display--md">Мастер на связи каждый день</h2>
+          <p class="v-body">Вы говорите напрямую с мастером – без прорабов-посредников. Перед стартом получаете план ремонта. Каждый день – фото с площадки и отчёт: что сделано за день и что дальше, если вас нет рядом.</p>
+          <figure class="pair__fig pair__fig--tall" data-v-reveal="up" data-v-reveal-at="0.22 0.52">
+            <img src="assets/hall-after.webp" srcset="assets/hall-after-800.webp 800w, assets/hall-after.webp 1200w" sizes="(max-width: 860px) 100vw, 34rem" alt="Коридор после ремонта с перегородкой из рифлёного стекла в чёрном профиле" width="1200" height="1589" loading="lazy" decoding="async">
+            <figcaption>Перегородка из рифлёного стекла – зонирует и пропускает свет</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · ДЕЙСТВИЕ: коллапс, «Стало» занимает весь экран -->
+    <section class="fin" id="raschet" data-v-act="pin" data-v-span="2.2" aria-label="Рассчитать ремонт">
+      <div data-v-stage>
+        <div class="fin__after">
+          <div class="fin__img"><img src="assets/room-after.webp" srcset="assets/room-after-800.webp 800w, assets/room-after-1200.webp 1200w, assets/room-after.webp 1920w" sizes="100vw" alt="" width="1920" height="1067" loading="lazy" decoding="async"></div>
+          <div class="fin__scrim" aria-hidden="true"></div>
+          <div class="fin__copy" data-v-cue="0 2 0 0" data-v-rise="0">
+            <h2 class="v-display v-display--md">Стало: ваша ванная – стекло и порядок</h2>
+            <p class="v-lede">Пришлите размеры или план. Вернёмся со сметой и графиком по неделям.</p>
+            <a class="v-btn" href="{{ссылка-расчёта}}">Рассчитать стоимость</a>
+            <div class="fin__meta">
+              <a class="fin__tel" href="tel:{{телефон}}">{{телефон}}</a>
+              <p class="fin__msg" data-slot-optional><a href="https://t.me/{{телеграм}}" target="_blank" rel="noopener">Telegram</a><a href="https://wa.me/{{вотсап}}" target="_blank" rel="noopener">WhatsApp</a></p>
+              <span>{{адрес}} · Москва и юг Подмосковья</span>
+            </div>
+          </div>
+          <footer class="foot">
+            <span>Стекло и ремонт · Москва и юг Подмосковья</span>
+            <span>{{юрлицо}} · ИНН {{ИНН}}</span>
+            <span class="foot__more">Душевые из стекла, перегородки, ремонт ванных, квартир и домов</span>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  // На телефоне пины короче: hero и финал держатся 1,5 экрана вместо 2,2.
+  // data-v-span из CSS не поменять, поэтому правим атрибут до монтирования.
+  if (window.matchMedia('(max-width: 860px)').matches) {
+    document.getElementById('hero').setAttribute('data-v-span', '1.5');
+    document.getElementById('raschet').setAttribute('data-v-span', '1.5');
+    // на телефоне шторка hero идёт снизу вверх, а не справа налево
+    var heroAfter = document.querySelector('#hero .hero__after');
+    if (heroAfter) heroAfter.setAttribute('data-v-reveal', 'up');
+  }
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Фирменный ход: делитель «было / стало» и есть шапка. На первом экране он стоит на 42%
+  // и по прокрутке уезжает к левому краю (комната «становится отремонтированной»), за один
+  // экран после сцены возвращается к 50%, стоит на границе колонок всех пар и снова уезжает
+  // к левому краю в финале. Точки на нём показывают, где мы в аргументе, и работают как якоря.
+  (function () {
+    var page = document.querySelector('.v-page');
+    var hero = document.getElementById('hero'), fin = document.getElementById('raschet');
+    var offerBtn = document.querySelector('#hero .v-btn');
+    var ticksEl = document.querySelector('.chrome__ticks'), labelsEl = document.querySelector('.chrome__labels');
+    var lineEl = document.querySelector('.chrome__line');
+    var sticky = document.querySelector('.sticky-cta');
+    // секции берём из якорей точек; секцию, удалённую при сборке (data-slot-optional), пропускаем вместе с её точкой
+    var ticks = [], secs = [];
+    Array.prototype.forEach.call(ticksEl.children, function (a) {
+      var s = document.querySelector(a.getAttribute('href'));
+      if (s) { ticks.push(a); secs.push(s); } else a.hidden = true;
+    });
+    ticks.forEach(function (a, i) {
+      a.addEventListener('click', function (e) { e.preventDefault(); secs[i].scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    });
+    var clamp = function (v, a, b) { return v < a ? a : v > b ? b : v; };
+    var sm = function (t) { return t * t * (3 - 2 * t); };
+    var pv = function (el) { return parseFloat(getComputedStyle(el).getPropertyValue('--v-p')) || 0; };
+    var lastDx = null, lastHx = null, lastN = -1, lastHid = null, raf = null;
+    function tick() {
+      raf = null;
+      var y = window.scrollY, vh = window.innerHeight, dx;
+      var hEnd = hero.offsetTop + hero.offsetHeight - vh;
+      // вариант Б: делитель на первом экране стоит на 44% (кромка колонки оффера);
+      // --hxn нужен только для затухания подписи «было» по мере открытия шторки
+      var hx = Math.round(44 * (1 - sm(clamp(pv(hero) / .85, 0, 1))) * 100) / 100;
+      if (hx !== lastHx) {
+        lastHx = hx; page.style.setProperty('--hx', hx + '%'); page.style.setProperty('--hxv', hx + 'vw'); page.style.setProperty('--hxn', hx);
+      }
+      if (y >= fin.offsetTop - vh) dx = 0;
+      else if (y <= hEnd) dx = 44;
+      else dx = 44 * (1 - sm(clamp((y - hEnd) / vh, 0, 1)));
+      dx = Math.round(dx * 100) / 100;
+      if (dx !== lastDx) {
+        lastDx = dx; page.style.setProperty('--dx', dx + '%'); page.style.setProperty('--dxv', dx + 'vw');
+      }
+      var edge = dx < 3;
+      ticksEl.classList.toggle('is-edge', edge); labelsEl.classList.toggle('is-edge', edge);
+      if (lineEl) lineEl.classList.toggle('is-edge', edge);
+      var n = -1, mid = y + vh * 0.5;
+      for (var i = 0; i < secs.length; i++) if (secs[i].offsetTop <= mid) n = i;
+      if (n !== lastN) {
+        lastN = n;
+        ticks.forEach(function (t, i) { t.classList.toggle('is-on', i <= n); t.classList.toggle('is-now', i === n); });
+      }
+      // липкая кнопка на телефоне: после того как сцена с кнопкой оффера ушла за верх экрана, до финала
+      var hid = offerBtn.getBoundingClientRect().bottom > 0 || n === secs.length - 1;
+      if (hid !== lastHid) { lastHid = hid; sticky.classList.toggle('is-hidden', hid); }
+    }
+    var ask = function () { if (!raf) raf = requestAnimationFrame(tick); };
+    window.addEventListener('scroll', ask, { passive: true });
+    window.addEventListener('resize', ask);
+    window.addEventListener('load', ask);
+    tick();
+  })();
+</script>
+</body>
+</html>
